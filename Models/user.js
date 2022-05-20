@@ -9,7 +9,7 @@ var UserSchema = Schema ({
     password: String,
    // user_id: String,
     //favorite games hold the GameID for further API requests
-    puntos: Float64Array
+    puntos: Number
     }
 );
 
