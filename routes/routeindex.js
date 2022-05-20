@@ -39,15 +39,25 @@ router.get('/', async function(req,res){
   router.get("/aprender_tema", async  (req,res) => {
     res.render('aprender_tema');
   })
+  //TODO
+  //que el perfil pueda cargar info de usuarios de la db
+  //bug: req esta vacio
   router.get("/perfil",verify, async  (req,res) => {
 
     console.log("Loading profile")
-    console.log(req.body)
-    var user = await User.find({username: req.username} , {name: 1, username: 1,puntos: 1, _id: 0})
-    var score = user[0].puntos
+    console.log(req.userId)
+    var search = req.userId
+    var user = await User.findOne({username: search})
+    var name = user.name
+    var score = user.score
+    var username = user.username
+    var score = user.puntos
+    console.log(user)
+    console.log(name)
+    console.log(score)
+    console.log(username)
 
-
-    res.render('perfil',{user});
+    res.render('perfil',{name,username,score});
   })
    router.get("/practicar_pregunta", async  (req,res) => {
     res.render('practicar_pregunta');
