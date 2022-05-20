@@ -5,11 +5,11 @@ const bcrypt = require("bcrypt");
 
 var UserSchema = Schema ({
     name: String,
-    user_name: String,
+    username: String,
     password: String,
    // user_id: String,
     //favorite games hold the GameID for further API requests
-    puntos: Number
+    puntos: {type: Number, default: 0}
     }
 );
 

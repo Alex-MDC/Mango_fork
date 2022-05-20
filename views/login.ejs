@@ -24,16 +24,17 @@
 			      	<div class="d-flex">
 			      		<div class="w-100">
 			      			<h3 class="mb-4">Iniciar sesión</h3>
+						
 			      		</div>
 								
 			      	</div>
-							<form action="#" class="signin-form">
+							<form action="/login" method="POST" class="signin-form">
 			      		<div class="form-group mt-3">
-			      			<input type="text" class="form-control" required>
+			      			<input type="text" class="form-control" name="username" placeholder="Usuario">
 			      			<label class="form-control-placeholder" for="username">Usuario</label>
 			      		</div>
 		            <div class="form-group">
-		              <input id="password-field" type="password" class="form-control" required>
+		              <input id="password-field" type="password" class="form-control" name="password" placeholder="Contraseña">
 		              <label class="form-control-placeholder" for="password">Contraseña</label>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 		            </div>
