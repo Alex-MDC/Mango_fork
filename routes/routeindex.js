@@ -36,8 +36,11 @@ router.get('/', async function(req,res){
   router.get("/aprender", async  (req,res) => {
     res.render('aprender');
   })
-  router.get("/aprender_tema", async  (req,res) => {
-    res.render('aprender_tema');
+  router.get("/aprender_tema_familia", async  (req,res) => {
+    res.render('aprender_tema_familia');
+  })
+  router.get("/aprender_tema_cuerpo", async  (req,res) => {
+    res.render('aprender_tema_cuerpo');
   })
   //TODO
   //que el perfil pueda cargar info de usuarios de la db
