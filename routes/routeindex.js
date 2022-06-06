@@ -97,7 +97,7 @@ router.get('/', async function(req,res){
             user.password = await bcrypt.hashSync(user.password, 10)
             await user.save()
             //home comom placholder
-            res.redirect('/login', {user})
+            res.redirect('/login')
             
           }
         }
