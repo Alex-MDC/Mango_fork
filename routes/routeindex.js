@@ -45,6 +45,15 @@ router.get('/', async function(req,res){
   router.get("/aprender_tema_alimentos", async  (req,res) => {
     res.render('aprender_tema_alimentos');
   })
+  router.get("/aprender_tema_colores", async  (req,res) => {
+    res.render('aprender_tema_colores');
+  })
+  router.get("/aprender_tema_escuela", async  (req,res) => {
+    res.render('aprender_tema_escuela');
+  })
+  router.get("/aprender_tema_abecedario", async  (req,res) => {
+    res.render('aprender_tema_abecedario');
+  })
   //TODO
   //que el perfil pueda cargar info de usuarios de la db
   //bug: req esta vacio
